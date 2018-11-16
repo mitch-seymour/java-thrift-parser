@@ -374,7 +374,7 @@ public class ThriftAst extends BaseParser<Object> {
      */
     Rule FieldID() {
         // No direct effect on value stack
-        return Sequence(IntConstant(), ": ");
+        return Sequence(IntConstant(), WhiteSpace(), ": ");
     }
 
     //================================================================================
