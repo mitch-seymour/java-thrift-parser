@@ -376,22 +376,23 @@ class ParserActions {
             @Override
             public boolean run(Context context) {
                 ValueStack valueStack = context.getValueStack();
-                IdentifierNode identifier = (IdentifierNode) valueStack.pop();
-                FieldTypeNode fieldType = (FieldTypeNode) valueStack.pop();
 
                 Optional<IntConstNode> id;
                 Optional<ConstValueNode> value;
-
-                if (IntConstNode.class.isInstance(valueStack.peek())) {
-                    id = Optional.of((IntConstNode) valueStack.pop());
-                } else {
-                    id = Optional.empty();
-                }
 
                 if (ConstValueNode.class.isInstance(valueStack.peek())) {
                     value = Optional.of((ConstValueNode) valueStack.pop());
                 } else {
                     value = Optional.empty();
+                }
+
+                IdentifierNode identifier = (IdentifierNode) valueStack.pop();
+                FieldTypeNode fieldType = (FieldTypeNode) valueStack.pop();
+
+                if (IntConstNode.class.isInstance(valueStack.peek())) {
+                    id = Optional.of((IntConstNode) valueStack.pop());
+                } else {
+                    id = Optional.empty();
                 }
 
                 XsdFieldOptionsNode xsdFieldOptions = null; // temporarily disabled

@@ -28,6 +28,19 @@ public class ThriftParserTest {
     }
 
     @Test
+    public void structAast() throws IOException {
+        Optional<DocumentNode> parsedDocument = parseThriftFileAst("/struct.thrift");
+        assert (parsedDocument.isPresent());
+        DocumentNode document = parsedDocument.get();
+        assert (document.headers.size() > 0);
+        assert (document.definitions.size() == 1);
+        assert(document.definitions.get(0).type.equals(Nodes.StructNode.class));
+        final Nodes.StructNode structNode = (Nodes.StructNode) document.definitions.get(0).value;
+        assert(structNode.fields.size() == 3);
+        System.out.println(document.printTree());
+    }
+
+    @Test
     public void enumAast() throws IOException {
         Optional<DocumentNode> parsedDocument = parseThriftFileAst("/enum.thrift");
         assert(parsedDocument.isPresent());
