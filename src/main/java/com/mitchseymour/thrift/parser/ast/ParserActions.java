@@ -238,7 +238,6 @@ class ParserActions {
             @Override
             public boolean run(Context context) {
                 ValueStack valueStack = context.getValueStack();
-                IdentifierNode identifier = (IdentifierNode) valueStack.pop();
 
                 Optional<IntConstNode> value;
 
@@ -248,6 +247,7 @@ class ParserActions {
                     value = Optional.empty();
                 }
 
+                IdentifierNode identifier = (IdentifierNode) valueStack.pop();
                 EnumValueNode node = new EnumValueNode(identifier, value);
                 valueStack.push(node);
                 return true;
