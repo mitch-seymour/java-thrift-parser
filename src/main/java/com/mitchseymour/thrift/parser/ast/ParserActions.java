@@ -226,6 +226,7 @@ class ParserActions {
                         break;
                     }
                 }
+                Collections.reverse(values);
                 EnumNode node = new EnumNode(identifier, values);
                 valueStack.push(node);
                 return true;
