@@ -52,8 +52,8 @@ public class ThriftParserTest {
         assert(enumNode.values.size() == 3);
         assert(enumNode.values.get(0).getClass().equals(Nodes.EnumValueNode.class));
         final Nodes.EnumValueNode enumValueNode = enumNode.values.get(0);
-        assert("VALUE3".equalsIgnoreCase(enumValueNode.identifier.name));
-        assert(enumValueNode.value.map(intConstNode -> intConstNode.value).orElse(-1) == 2);
+        assert("VALUE1".equalsIgnoreCase(enumValueNode.identifier.name));
+        assert(enumValueNode.value.map(intConstNode -> intConstNode.value).orElse(-1) == 0);
         System.out.println(document.printTree());
     }
 }
