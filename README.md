@@ -105,22 +105,22 @@ The above example will output:
         Type Def: string  MonkeyType
       Definition:
         Enum: Family
-          Enum Value: ANCIENT_APE
           Enum Value: LESSER_API
+          Enum Value: ANCIENT_APE
       Definition:
         Enum: Activity
-          Enum Value: SWINGING
-          Enum Value: CLIMBING
           Enum Value: SWIMMING
+          Enum Value: CLIMBING
+          Enum Value: SWINGING
       Definition:
         Enum: ForestAnimal
-          Enum Value: TIGER
-          Enum Value: MOUSE
           Enum Value: BIRD
+          Enum Value: MOUSE
+          Enum Value: TIGER
       Definition:
         Enum: WaterAnimal
-          Enum Value: ALLIGATOR
           Enum Value: FISH
+          Enum Value: ALLIGATOR
       Definition:
         Struct: Monkey
           Field: 1: string name
