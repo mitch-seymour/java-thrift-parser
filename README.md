@@ -4,6 +4,24 @@ This library contains a parser that can translate the contents of a Thrift file 
 
 More information about this project is available [here.](https://mitch-seymour.github.io/building-a-thrift-parser-with-parboiled/)
 
+Download
+---------
+Gradle:
+```groovy
+compile 'com.mitchseymour:java-thrift-parser:0.1.0'
+```
+
+Maven:
+```xml
+<dependency>
+  <groupId>com.mitchseymour</groupId>
+  <artifactId>java-thrift-parser</artifactId>
+  <version>0.1.0</version>
+</dependency>
+```
+
+[Jar downloads](https://search.maven.org/artifact/com.mitchseymour/java-thrift-parser/0.1.0/jar) are available from Maven Central.
+
 Components
 ----------
 ### Recognizer
