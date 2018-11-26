@@ -606,8 +606,9 @@ class ParserActions {
             public boolean run(Context context) {
                 ValueStack valueStack = context.getValueStack();
                 if (valueStack.size() > 0) {
-                    ConstValueNode node = new ConstValueNode(context.getMatch());
-                    valueStack.pop(); // pop whatever the match was
+                    // pop whatever the match was
+                    final AstNode value = (AstNode) valueStack.pop();
+                    ConstValueNode node = new ConstValueNode(context.getMatch(), value);
                     valueStack.push(node);
                 }
                 return true;

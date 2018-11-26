@@ -63,7 +63,7 @@ public class Nodes {
     }
 
     public static class ConstListItemNode extends AstNode {
-        AstNode value;
+        public AstNode value;
 
         public ConstListItemNode(AstNode value) {
             this.value = value;
@@ -119,12 +119,15 @@ public class Nodes {
     public static class ConstValueNode extends AstNode {
         public String constant;
 
+        public AstNode value;
+
         public String toString() {
             return String.format("%s", constant);
         }
 
-        ConstValueNode(String constant) {
+        ConstValueNode(String constant, final AstNode value) {
             this.constant = constant;
+            this.value = value;
         }
     }
 
