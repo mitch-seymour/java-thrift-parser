@@ -1,3 +1,10 @@
+buildscript {
+    if (!project.hasProperty("sonatypeUsername") || !project.hasProperty("sonatypePassword")) {
+        ext.sonatypeUsername = System.getenv("SONATYPE_USERNAME")
+        ext.sonatypePassword = System.getenv("SONATYPE_PASSWORD")
+    }
+}
+
 apply plugin: 'java'
 apply plugin: 'maven-publish'
 apply plugin: 'signing'
