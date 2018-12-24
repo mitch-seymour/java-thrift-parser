@@ -1,4 +1,4 @@
-Java Thrift Parser &nbsp; [![Build Status](https://travis-ci.com/mitch-seymour/java-thrift-parser.svg?branch=master)](https://travis-ci.com/mitch-seymour/java-thrift-parser)
+Java Thrift Parser &nbsp; [![Build Status](https://travis-ci.com/mitch-seymour/java-thrift-parser.svg?branch=master)](https://travis-ci.com/mitch-seymour/java-thrift-parser) [![Maven Central](https://img.shields.io/maven-central/v/com.mitchseymour/java-thrift-parser.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.mitchseymour%22%20AND%20a:%22java-thrift-parser%22)
 ---------
 This library contains a parser that can translate the contents of a Thrift file into an Abstract Syntax Tree. Each node in the tree represents a Thrift type that is encountered during the parsing process, and is organized hierarchically under a root Document node. Being able to programatically navigate the structure of a Thrift file opens the door for all kinds of opportunties, so if you use this software in any interesting capacity, be sure to let me know and I’ll share it on the README.
 
